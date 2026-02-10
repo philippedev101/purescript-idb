@@ -1,0 +1,12 @@
+{
+  "name": "purescript-idb",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "idb": "^8.0.0"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.0.0",
+    "spago": "^1.0.3"
+  }
+}

@@ -1,0 +1,21 @@
+package:
+  name: idb
+  dependencies:
+    - aff
+    - effect
+    - js-promise
+    - js-promise-aff
+    - maybe
+    - nullable
+    - prelude
+    - foreign
+    - arrays
+  test:
+    main: Test.Main
+    dependencies:
+      - console
+      - assert
+workspace:
+  extraPackages: {}
+  packageSet:
+    registry: 63.3.0

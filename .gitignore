@@ -1,0 +1,5 @@
+node_modules/
+output/
+.spago/
+.parcel-cache/
+.psci_modules/
