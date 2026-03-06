@@ -1,8 +1,11 @@
 package:
   name: idb
+  publish:
+    license: Apache-2.0
+    location:
+      githubOwner: philippedev101
+      githubRepo: purescript-idb
   description: PureScript FFI bindings for IndexedDB via the idb library
-  license: Apache-2.0
-  repository: https://github.com/philippedev101/purescript-idb
   dependencies:
     - aff
     - effect
