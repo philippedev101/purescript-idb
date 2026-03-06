@@ -1,3 +1,8 @@
+-- | PureScript FFI bindings for IndexedDB via the
+-- | [idb](https://www.npmjs.com/package/idb) library.
+-- |
+-- | All operations run in `Aff` and work with any IndexedDB-compatible
+-- | environment (browsers, or Node.js with `fake-indexeddb`).
 module Web.IDB
   ( IDBDatabase
   , open
@@ -18,6 +23,7 @@ import Foreign (Foreign)
 import Promise (Promise)
 import Promise.Aff (toAffE)
 
+-- | An opaque handle to an open IndexedDB database.
 foreign import data IDBDatabase :: Type
 
 foreign import _open :: String -> Int -> Array String -> Effect (Promise IDBDatabase)
