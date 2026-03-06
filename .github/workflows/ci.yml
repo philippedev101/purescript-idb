@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('bun.lock') }}
+
+      - name: Cache .spago
+        uses: actions/cache@v4
+        with:
+          path: .spago
+          key: spago-${{ hashFiles('spago.lock') }}
+
+      - name: Install dependencies
+        run: |
+          bun install
+          bun add -g purescript
+
+      - name: Build
+        run: bunx spago build
+
+      - name: Test
+        run: bunx spago test
