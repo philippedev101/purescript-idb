@@ -6,7 +6,6 @@
         "core": {
           "dependencies": [
             "aff",
-            "arrays",
             "effect",
             "foreign",
             "js-promise",
