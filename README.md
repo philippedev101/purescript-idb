@@ -29,7 +29,7 @@ main = launchAff_ do
 
 ## Setup
 
-Requires PureScript (`purs`) on PATH (e.g. via `nix-shell`).
+Requires PureScript (`purs`) on PATH.
 
 ```bash
 bun install
